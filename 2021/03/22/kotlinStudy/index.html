@@ -98,11 +98,15 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Keke">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="Welcome to KLN，here are base kownledge of Kotlin.Kotlin language is the first android developer language after Google declared years ago. 写在前言1. kotlin 概述1.1. 程序结构如果 Kotlin 文件包含单个类（其他的顶层声明不影响），那么文件名应该">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kotlin Learn Note">
+<meta property="og:url" content="http://yoursite.com/2021/03/22/kotlinStudy/index.html">
 <meta property="og:site_name" content="Keke">
+<meta property="og:description" content="Welcome to KLN，here are base kownledge of Kotlin.Kotlin language is the first android developer language after Google declared years ago. 写在前言1. kotlin 概述1.1. 程序结构如果 Kotlin 文件包含单个类（其他的顶层声明不影响），那么文件名应该">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-03-22T12:38:00.000Z">
+<meta property="article:modified_time" content="2021-04-20T12:51:32.135Z">
 <meta property="article:author" content="YkekeY">
 <meta name="twitter:card" content="summary">
 
@@ -134,7 +138,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2021/03/22/kotlinStudy/"/>
 
 
 
@@ -152,7 +156,7 @@
     })();
 </script>
 
-  <title>Keke</title>
+  <title>Kotlin Learn Note | Keke</title>
   
 
 
@@ -181,8 +185,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <!--fork me from github-->
@@ -343,1005 +346,8 @@
           <div id="content" class="content">
             
 
-  <!--轮播图-->
-  
-
-<!--
-<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
--->
-
-<script src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap.min.js@3.3.5/bootstrap.min.js"></script>
-
-<style type="text/css">
-
-.glyphicon-chevron-left:before{
-	/* content: "《" */
-}
-.glyphicon-chevron-right:before{
-	/* content: "》" */
-}
-
-.right-siders{
-   border-radius: 5px;
-   /*margin-top: 5px;
-   margin-bottom: 10px;*/
-}
-
-.my-carousel{
-    /*height: 10%;*/
-    margin-bottom: 12px;
-}
-
-.my-carousel:hover{
-  margin-left: 5px;
-  //padding: 5px 1px;
-  border-radius: 5px;
-  transform: scale(1.1);
-  box-shadow: 10px 10px 15px 2px rgba(0,0,0,.12), 0 0 6px 0 rgba(104, 104, 105, 0.1);
-}
-
-@media (max-width: 767px){
-	.rights{
-		display: none;
-	}
-	.carousel{
-		width: 100% !important;
-		height: 100% !important;
-	}
-	.slide{
-		width: 100% !important;
-		height: 100% !important;
-	}
-
-	.carousel-control .glyphicon-chevron-left,
-  .carousel-control .glyphicon-chevron-right,
-  .carousel-control .icon-prev,
-  .carousel-control .icon-next {
-    width: 30px;
-    height: 30px;
-    margin-top: -10px;
-    font-size: 30px;
-  }
-  .carousel-control .glyphicon-chevron-left,
-  .carousel-control .icon-prev {
-    margin-left: -10px;
-  }
-  .carousel-control .glyphicon-chevron-right,
-  .carousel-control .icon-next {
-   /* margin-right: -10px; */
-  }
-
-}
-
-.carousel{
-	width: 65%;
-	height: 100%;
-	position: relative;
-}
-
-.carousel-inner {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-.carousel-inner > .item {
-  display: none;
-  position: relative;
-  -webkit-transition: 0.6s ease-in-out left;
-  -o-transition: 0.6s ease-in-out left;
-  transition: 0.6s ease-in-out left;
-}
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  line-height: 1;
-}
-@media all and (transform-3d), (-webkit-transform-3d) {
-  .carousel-inner > .item {
-    -webkit-transition: -webkit-transform 0.6s ease-in-out;
-    -moz-transition: -moz-transform 0.6s ease-in-out;
-    -o-transition: -o-transform 0.6s ease-in-out;
-    transition: transform 0.6s ease-in-out;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-perspective: 1000px;
-    -moz-perspective: 1000px;
-    perspective: 1000px;
-  }
-  .carousel-inner > .item.next,
-  .carousel-inner > .item.active.right {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-    left: 0;
-  }
-  .carousel-inner > .item.prev,
-  .carousel-inner > .item.active.left {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-    left: 0;
-  }
-  .carousel-inner > .item.next.left,
-  .carousel-inner > .item.prev.right,
-  .carousel-inner > .item.active {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    left: 0;
-  }
-}
-.carousel-inner > .active,
-.carousel-inner > .next,
-.carousel-inner > .prev {
-  display: block;
-}
-.carousel-inner > .active {
-  left: 0;
-}
-.carousel-inner > .next,
-.carousel-inner > .prev {
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-.carousel-inner > .next {
-  left: 100%;
-}
-.carousel-inner > .prev {
-  left: -100%;
-}
-.carousel-inner > .next.left,
-.carousel-inner > .prev.right {
-  left: 0;
-}
-.carousel-inner > .active.left {
-  left: -100%;
-}
-.carousel-inner > .active.right {
-  left: 100%;
-}
-.carousel-control {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  /*width: 5%;*/
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  font-size: 20px;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-  background-color: rgba(0, 0, 0, 0);
-}
-.carousel-control.left {
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#80000000, endColorstr=#00000000, GradientType=1);
-}
-.carousel-control.right {
-  left: auto;
-  right: 0;
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000, endColorstr=#80000000, GradientType=1);
-}
-.carousel-control:hover,
-.carousel-control:focus {
-  outline: 0;
-  color: #fff;
-  text-decoration: none;
-  opacity: 0.9;
-  filter: alpha(opacity=90);
-}
-.carousel-control .icon-prev,
-.carousel-control .icon-next,
-.carousel-control .glyphicon-chevron-left,
-.carousel-control .glyphicon-chevron-right {
-  position: absolute;
-  top: 50%;
-  margin-top: -10px;
-  z-index: 5;
-  display: inline-block;
-}
-/*
-.carousel-control .icon-prev,
-.carousel-control .glyphicon-chevron-left {
-  left: 50%;
-  margin-left: -10px;
-}
-*/
-
-.carousel-control .icon-prev,
-.carousel-control .glyphicon-chevron-left {
-  background: url('/images/icon-slides.png');
-  background-position-y: -20px;
-  left: 9px;
-}
-
-/*
-.carousel-control .icon-next,
-.carousel-control .glyphicon-chevron-right {
-  right: 50%;
-  margin-right: -10px;
-}
-*/
-
-.carousel-control .icon-next,
-.carousel-control .glyphicon-chevron-right {
-  background: url('/images/icon-slides.png');
-  background-position-x: -50px;
-  background-position-y: -20px;
-  right: 0px;
-}
-
-.carousel-control .icon-prev,
-.carousel-control .icon-next {
-  width: 20px;
-  height: 20px;
-  line-height: 1;
-  font-family: serif;
-}
-
-.carousel-control .icon-prev:before {
-  content: 2039;
-}
-.carousel-control .icon-next:before {
-  content: 203a;
-}
-
-.carousel-indicators {
-  opacity: 0.5;
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  z-index: 15;
-  width: 60%;
-  margin-left: -30%;
-  padding-left: 0;
-  list-style: none;
-  text-align: center;
-}
-.carousel-indicators li {
-  display: inline-block;
-  width: 30px;
-  height: 3px;
-  margin: 5px;
-  text-indent: -999px;
-  border: 1px solid #bbb;
-  border-radius: 10px;
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, .24);
-}
-.carousel-indicators .active {
-  width: 30px;
-  height: 3px;
-  background-color: #fff;
-}
-.carousel-caption {
-  position: absolute;
-  left: 15%;
-  right: 15%;
-  bottom: 20px;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-.carousel-caption .btn {
-  text-shadow: none;
-}
-@media screen and (min-width: 768px) {
-  .carousel-control .glyphicon-chevron-left,
-  .carousel-control .glyphicon-chevron-right,
-  .carousel-control .icon-prev,
-  .carousel-control .icon-next {
-    width: 30px;
-    height: 30px;
-    margin-top: -10px;
-    font-size: 30px;
-  }
-  .carousel-control .glyphicon-chevron-left,
-  .carousel-control .icon-prev {
-    margin-left: -10px;
-  }
-  .carousel-control .glyphicon-chevron-right,
-  .carousel-control .icon-next {
-   /* margin-right: -10px; */
-  }
-  .carousel-caption {
-    left: 20%;
-    right: 20%;
-    padding-bottom: 30px;
-  }
-  .carousel-indicators {
-    bottom: -20px;
-  }
-}
-</style>
-
-<div width="100%" height="24%" style="border: 0px; overflow: hidden; border-radius: 10px; margin-bottom: 25px;" scrolling="no">
-
-	<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3500" style="float:left">
-
-      <!-- 轮播（Carousel）指标 -->
-      <ol class="carousel-indicators">
-      
-      
-        <li data-target="#myCarousel" data-slide-to="0"></li>
-        
-      
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        
-      
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        
-      
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-        
-      
-        <li data-target="#myCarousel" data-slide-to="4"></li>
-        
-      
-      </ol>
-
-      <!-- 轮播（Carousel）项目 -->
-      <div class="carousel-inner" style="height: 24%; border-radius: 10px; width: 100%;">
-       
-       
-          
-          <a class="item active" href="https://space.bilibili.com/383555385" target="_blank" style="height: 100%;">
-            
-            <img src="https://cdn.jsdelivr.net/gh/YkekeY/blog_file/bilibili.png" class="nofancybox"  style="width: 100%; height: 100%" >
-          </a>
-          
-          
-      
-          
-            <a class="item" href="https://www.liaofuzhan.com/posts/507826828.html" target="_blank" style="height: 100%;">
-              <img src="https://cdn.jsdelivr.net/gh/leafjame/cdn/img/carousel/mobile.png" class="nofancybox"  style="width: 100%; height: 100%;" >
-            </a>
-        
-      
-          
-            <a class="item" href="https://mailchi.mp/e92415d27722/leaf" target="_blank" style="height: 100%;">
-              <img src="https://cdn.jsdelivr.net/gh/leafjame/cdn/img/carousel/subscribe.png" class="nofancybox"  style="width: 100%; height: 100%;" >
-            </a>
-        
-      
-          
-            <a class="item" href="https://github.com/leafjame/hexo-theme-next5-leaf" target="_blank" style="height: 100%;">
-              <img src="https://cdn.jsdelivr.net/gh/leafjame/cdn/img/carousel/share.png" class="nofancybox"  style="width: 100%; height: 100%;" >
-            </a>
-        
-      
-          
-            <a class="item" href="https://www.liaofuzhan.com/photos/" target="_blank" style="height: 100%;">
-              <img src="https://cdn.jsdelivr.net/gh/leafjame/cdn/img/carousel/photos.png" class="nofancybox"  style="width: 100%; height: 100%;" >
-            </a>
-        
-      
-      </div>
-
-      <!-- 轮播（Carousel）导航 -->
-      <a class="left carousel-control" data-target="#myCarousel" href="javascript:void(0);" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      </a>
-      <a class="right carousel-control" data-target="#myCarousel" href="javascript:void(0);" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      </a>
-
-	  </div>
-
-	<div  class="rights" style="width: 30%; height: 24%; margin-right: 15px;margin-left: 0px;float: right;">
-
-  	   <!-- 天气插件 -->
-  	   <!-- 会有http的链接
-       <iframe width="300px" scrolling="no" height="50px" frameborder="0" allowtransparency="true" src="https://i.tianqi.com/index.php?c=code&id=12&color=%23&bdc=%23&icon=1&py=beijing&num=2&site=12"></iframe>
-       -->
-
-       <!-- https://tianqi.2345.com/plugin/setting.htm -->
-       <!-- <iframe allowtransparency="true" frameborder="0" width="290" height="75" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=2&t=0&v=0&d=2&bd=0&k=000000&f=&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=54511&w=290&h=75&align=left"></iframe> -->
-       <iframe allowtransparency="true" frameborder="0" width="300" height="55" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=2&d=1&bd=0&k=000000&f=&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=54511&w=300&h=55&align=left"></iframe>
-
-  	   <!-- 热门排行 -->
-  	   <div class="my-carousel">
-         <a href="https://www.liaofuzhan.com/top/" target="_blank">
-            <img class="right-siders nofancybox" src="/images/hot.png" width="100%"/>
-         </a>
-  	   </div>
-
-  	   <!-- 时光留影 -->
-  	   <div class="my-carousel">
-         <a href="https://www.liaofuzhan.com/photos/" target="_blank">
-           <img class="right-siders nofancybox" src="/images/time.png"/>
-         </a>
-  	   </div>
-
-  	  <!-- 推荐阅读 -->
-  	  <div class="my-carousel">
-        <a href="https://www.liaofuzhan.com/books/" target="_blank">
-          <img class="right-siders nofancybox" src="/images/read.png"/>
-        </a>
-  	  </div>
-
-      <!-- 订阅本站 -->
-      <div class="my-carousel">
-        <a href="https://mailchi.mp/e92415d27722/leaf" target="_blank">
-          <img class="right-siders nofancybox" src="/images/subscribe.png"/>
-        </a>
-     </div>
-
-   </div>
-
-</div>
-
-
-
-
-  <section id="posts" class="posts-expand">
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/25/welcom/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="YkekeY">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/keke.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Keke">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/25/welcom/" itemprop="url">欢迎至科科站点</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-             
-                 <i class="fa fa-thumb-tack"></i>
-                 <font color=7D26CD>置顶</font>
-                 <span class="post-meta-divider">|</span>
-             
-
-             
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-25T20:00:00+08:00">
-                2020-04-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2020/04/25/welcom/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/25/welcom/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          <!--
-          
-          -->
-
-          
-            <span class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </span>
-          
-
-          <!-- 隐藏文章内标题下，内容描述
-          
-          -->
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to KeKe’s stack! Thank your very first look. Check [My Repository]for more info. If you get any problems when using, you can ask me on <a href="https://github.com/YkekeY" target="_blank" rel="noopener">GitHub</a> or ask me on <a href="https://mail.qq.com" target="_blank" rel="noopener">EMail</a>（My Email:<a href="mailto:1798666590@qq.com">1798666590@qq.com</a>）.</p>
-<h2 id="遇到即是缘分"><a href="#遇到即是缘分" class="headerlink" title="遇到即是缘分~"></a>遇到即是缘分~</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">欢迎来到科科的个人博客，感谢您的到来</span><br><span class="line"></span><br><span class="line">本站建立日期：04&#x2F;25&#x2F;2020 </span><br><span class="line"></span><br><span class="line">如果想要了解本站的发展历程，请浏览《开发日志》</span><br><span class="line"></span><br><span class="line">如遇问题，请在评论区留言，或移步至我的github博客 （请点击上方[GitHub]) 或邮箱联系(请点击上方 [EMail]）(1798666590@qq.com)</span><br></pre></td></tr></table></figure></div>
-<p><img src="/images/YourName.jpg" alt="images"></p>
-<p>More info: <a href="https://github.com/YkekeY/YkekeY.github.io/" target="_blank" rel="noopener">My Repository</a></p>
-
-          
-        
-      
-    </div>
-
-      <!-- 相关文章推荐 -->
-     
-
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/27/daily/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="YkekeY">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/keke.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Keke">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/27/daily/" itemprop="url">Developer log 开发日志</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-             
-                 <i class="fa fa-thumb-tack"></i>
-                 <font color=7D26CD>置顶</font>
-                 <span class="post-meta-divider">|</span>
-             
-
-             
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-27T15:25:00+08:00">
-                2020-04-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2020/04/27/daily/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/27/daily/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          <!--
-          
-          -->
-
-          
-            <span class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </span>
-          
-
-          <!-- 隐藏文章内标题下，内容描述
-          
-          -->
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Weclom to Developer log,here you can see how my site developed.</p>
-<h1 id="导读"><a href="#导读" class="headerlink" title="导读"></a>导读</h1><p>在这你能够了解到本站的版本内容</p>
-<p>本站依旧更新完善中，谢谢理解</p>
-<h1 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h1><h2 id="1-0v"><a href="#1-0v" class="headerlink" title="1.0v"></a>1.0v</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">04&#x2F;25&#x2F;2020 20:00:00 1.0.0v 基于Hexo首次搭建站点，theme为默认</span><br></pre></td></tr></table></figure></div>
-<h2 id="2-0v"><a href="#2-0v" class="headerlink" title="2.0v"></a>2.0v</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">04&#x2F;25&#x2F;2020 22:00:00 2.0.0v 更改theme为leaf</span><br><span class="line"></span><br><span class="line">04&#x2F;26&#x2F;2020 19:00:00 2.0.1v 修改theme配置文件属性，更新个人信息（部分功能依旧不可用）</span><br><span class="line"></span><br><span class="line">04&#x2F;26&#x2F;2020 21:00:00 2.0.2v 修改左侧栏标签分类</span><br><span class="line"></span><br><span class="line">04&#x2F;27&#x2F;2020 13:15:00 2.1.0v 基于gitment，增加评论功能（仅github用户,发现无法评论bug）</span><br><span class="line"></span><br><span class="line">04&#x2F;27&#x2F;2020 19:30:00 2.2.1v 增加基于LeanCloud的评论区，并展示关闭gitment评论功能</span><br><span class="line">                           修改theme配置文件的avatar</span><br></pre></td></tr></table></figure></div>
-
-          
-        
-      
-    </div>
-
-      <!-- 相关文章推荐 -->
-     
-
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/25/Problem/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="YkekeY">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/keke.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Keke">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/25/Problem/" itemprop="url">Problems to be solved 疑难杂谈(Updating Still)</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-             
-                 <i class="fa fa-thumb-tack"></i>
-                 <font color=7D26CD>置顶</font>
-                 <span class="post-meta-divider">|</span>
-             
-
-             
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-25T20:00:00+08:00">
-                2020-04-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/technology/" itemprop="url" rel="index">
-                    <span itemprop="name">technology</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2020/04/25/Problem/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/25/Problem/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          <!--
-          
-          -->
-
-          
-            <span class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </span>
-          
-
-          <!-- 隐藏文章内标题下，内容描述
-          
-          -->
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to PTBS，here are some problems I have met during my study,hope you can solve your question after reading it.</p>
-<h1 id="写在前言"><a href="#写在前言" class="headerlink" title="写在前言"></a>写在前言</h1><p>作为一名程序员，学习期间动手实践难免遇到问题，将所遇问题并解决方案收录于此，便有了这篇PTBK</p>
-<p>PTBK所收录的解决方法均为查找相关资料、网站、他人解答等等，经过本人实践后再组织，如有冒犯，请联系本人。在此，感谢那些为我解答问题的大佬、牛人</p>
-<p>本篇PTBS将会持续更新，直到哪天我不再遇到任何问题了（当然这是不可能的&gt;_&lt;）</p>
-<h1 id="Problems-amp-Solutions"><a href="#Problems-amp-Solutions" class="headerlink" title="Problems &amp; Solutions"></a>Problems &amp; Solutions</h1><h2 id="About-SQL"><a href="#About-SQL" class="headerlink" title="About SQL"></a>About SQL</h2><h3 id="找不到SQLServerManager"><a href="#找不到SQLServerManager" class="headerlink" title="找不到SQLServerManager"></a>找不到SQLServerManager</h3><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">（1）window系统使用win+r输入SQLServerManager15.msc以运行（注意版本号，示例处版本号为15）</span><br><span class="line"></span><br><span class="line">（2）如果不知版本，可使用搜索软件Everything进行查找，下方[Everything]为下载链接 </span><br><span class="line">     打开Everything输入SQLServerManager，会出现符合要求的文件，期中.msc文件便是你的SQL配置管理器</span><br></pre></td></tr></table></figure></div>
-<p><img src="/images/sql-1.png" alt="images"><br><img src="/images/sql-1.1.2.png" alt="images"></p>
-<p>More info: <a href="https://www.voidtools.com/zh-cn/" target="_blank" rel="noopener">Everything</a></p>
-<h2 id="About-Intellij-Idea"><a href="#About-Intellij-Idea" class="headerlink" title="About Intellij Idea"></a>About Intellij Idea</h2><h3 id="使用Idea创建一个JDBC连接sqlserver数据库"><a href="#使用Idea创建一个JDBC连接sqlserver数据库" class="headerlink" title="使用Idea创建一个JDBC连接sqlserver数据库"></a>使用Idea创建一个JDBC连接sqlserver数据库</h3><h4 id="配置数据库"><a href="#配置数据库" class="headerlink" title="配置数据库"></a>配置数据库</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">创建新的登录用户（用于测试），这里我新建了名为test，密码为123456（不需要勾选强制密码过期选项）的登录用户，注意在创建时将服务器角色的sysadmin勾选（主要是这个）</span><br><span class="line"></span><br><span class="line">创建一个数据库（用于连接测试），这里我新建了名为studb的库,并新建一些表</span><br></pre></td></tr></table></figure></div>
-<h4 id="端口设置"><a href="#端口设置" class="headerlink" title="端口设置"></a>端口设置</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">打开SQLSeverManager配置管理器，选择SQL Sever网咯配置，选择你的协议，将TCP&#x2F;IP启动并打开其属性，在IP栏中将IP6的IP地址改为120.0.0.1并启用，最后在IP All中将TCP动态端口改为1433</span><br></pre></td></tr></table></figure></div>
-<h4 id="jar包下载及IDEA导入"><a href="#jar包下载及IDEA导入" class="headerlink" title="jar包下载及IDEA导入"></a>jar包下载及IDEA导入</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在微软商店可以下载JDBC,这里我下载的是sqljdbc_8.2</span><br><span class="line"></span><br><span class="line">在IDEA的File选择Project Structure,找到Modules,选择Dependencies一栏，点击右侧“+”号，选择1或者2再将之前下载好的jar包导入（jar包在sqljdbc&#x2F;chs目录下）</span><br></pre></td></tr></table></figure></div>
-<h4 id="连接SQL"><a href="#连接SQL" class="headerlink" title="连接SQL"></a>连接SQL</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">IDEA新建一个工程test_sql，在src下新建名为Demo的class文件，在Demo类中进行测试（附上测试代码）</span><br><span class="line">public class Demo &#123;</span><br><span class="line">    private static Connection dbConn &#x3D; null;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        String dbURL &#x3D; &quot;jdbc:sqlserver:&#x2F;&#x2F;120.0.0.1:1433;DatabaseName&#x3D;test&quot;;</span><br><span class="line"></span><br><span class="line">        try &#123;</span><br><span class="line">            &#x2F;&#x2F;1.加载驱动</span><br><span class="line">            Class.forName(&quot;com.microsoft.sqlserver.jdbc.SQLServerDriver&quot;);</span><br><span class="line">            System.out.println(&quot;加载驱动成功！&quot;);</span><br><span class="line">            &#x2F;&#x2F;2.连接</span><br><span class="line">            dbConn &#x3D; DriverManager.getConnection(dbURL, &quot;test&quot;, &quot;123456&quot;);</span><br><span class="line">            System.out.println(&quot;连接数据库成功！&quot;);</span><br><span class="line">            String sql&#x3D;&quot;select * from studb&quot;;</span><br><span class="line">            PreparedStatement statement&#x3D;null;</span><br><span class="line">            statement&#x3D;dbConn.prepareStatement(sql);</span><br><span class="line">            ResultSet res&#x3D;null;</span><br><span class="line">            res&#x3D;statement.executeQuery();</span><br><span class="line">            while(res.next())&#123;</span><br><span class="line">                String title&#x3D;res.getString(&quot;name&quot;);</span><br><span class="line">                System.out.println(title);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;catch(Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            System.out.println(&quot;连接数据库失败！&quot;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">当终端出现“加载驱动成功！连接数据库成功！”以及你的数据库下的表中数据时，表面连接成功</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="About-PicGo"><a href="#About-PicGo" class="headerlink" title="About PicGo"></a>About PicGo</h2><h3 id="利用PicGo搭建Github图床"><a href="#利用PicGo搭建Github图床" class="headerlink" title="利用PicGo搭建Github图床"></a>利用PicGo搭建Github图床</h3><h4 id="下载并配置PicGo"><a href="#下载并配置PicGo" class="headerlink" title="下载并配置PicGo"></a>下载并配置PicGo</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-          
-        
-      
-    </div>
-
-      <!-- 相关文章推荐 -->
-     
-
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -1371,9 +377,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2021/03/22/kotlinStudy/" itemprop="url">Kotlin Learn Note</a></h2>
+          <h2 class="post-title" itemprop="name headline">Kotlin Learn Note</h2>
         
 
         <div class="post-meta">
@@ -1483,9 +487,7 @@
       
 
       
-        
-          
-            <p>Welcome to KLN，here are base kownledge of Kotlin.Kotlin language is the first android developer language after Google declared years ago.</p>
+        <p>Welcome to KLN，here are base kownledge of Kotlin.Kotlin language is the first android developer language after Google declared years ago.</p>
 <h1 id="写在前言"><a href="#写在前言" class="headerlink" title="写在前言"></a>写在前言</h1><h1 id="1-kotlin-概述"><a href="#1-kotlin-概述" class="headerlink" title="1. kotlin 概述"></a>1. kotlin 概述</h1><dl><dt>1.1. 程序结构<br>如果 Kotlin 文件包含单个类（其他的顶层声明不影响），那么文件名应该与该类的名称相同，<br>并用.kt 扩展名。如果文件包含多个类或只包含顶层声明，那不要求与类相同。<br>建议多个相关的类、顶级函数或者属性等内容放在同一个文件中。特别是为类定义与类相关<br>的扩展函数时，将它们放在与类自身定义相同的地方。<br>1.2. 程序入口点<br>Kotlin 应用程序的入口点是 main 函数，例如：<br>fun main(){<br>println(“Hello world!”)<br>}<br>1.3. 标签<br>kotlin 中任何表达式都可以用标签（label）来标记，格式：<br>labelname@<br>应用：<br>loop@ for( … ){}<br>在程序中，跳转指令就可以跳转到标签所在位置，例如：break@loop。<br>1.4. 编码规则<br> 区分大小写<br> 单行语句不需要分号结束，若一行有多个语句，需要用分号隔开<br> 字符串不能分开在两行中书写，若要分开，可以将之拆分成两个字符，用加号（+）连接<br> 注释：单行：// ，多行： /* <em>/ ，文档注释：/*</em> */，且注释可以嵌套<br>1.5. 常用符号<br>? 空值处理之可空类型变量<br>?. 空值处理之安全调用符<br>?: 空值处理之 Elvis 操作符<br>!!. 空值处理之非空断言<br>! 空值处理之平台类型标记</dt><dd>类型声明，继承、接口<br>:: 函数类型之函数参数、反射<br>== 比较两个值大小，即 java 中的 equals 方法<br>=== 比较对象地址，即比较两个对象是否相同””” “”” 字符串之原生符号<br>$ 字符串之模板表达式</dd></dl><h1 id="2-基本语法概述"><a href="#2-基本语法概述" class="headerlink" title="2. 基本语法概述"></a>2. 基本语法概述</h1><p>2.1. 包 Package<br>源文件通常以包声明开都，所以包的声明应处于源文件顶部，源文件的所有内容，都包含在<br>声明的包内。如果没有指明包，该文件的内容属于无名字的默认包。格式为：<br>package com.xx<br>有多个包会默认导入到每个 kotlin 文件中，例如：<br>kotlin.*<br>kotlin.annotation.*<br>kotlin.collections.*<br>kotlin.comparisons.*<br>kotlin.io.*<br>kotlin.ranges.*<br>kotlin.sequences.*<br>kotlin.text.*<br>2.2. 导入 import<br>除了默认导入之外，每个文件可以包含它自己的导入指令。<br>可以导入一个单独的名字，如：<br>import org.example.Message // 现在 Message 可以不用限定符访问<br>也可以导入一个作用域下的所有内容（包、类、对象等）:<br>import org.example.* //“org.example”中的一切都可访问<br>如果出现名字冲突，可以使用 as 关键字在本地重命名冲突项来消歧义：<br>import org.example.Message //Message可访问<br>import org.test.Message as testMessage //testMessage 代表“org.test.Message”<br>import 并不仅限于导入类，也可用它来导入其他声明：<br> 顶层函数及属性；<br> 在对象声明中声明的函数和属性;<br> 枚举常量。<br>2.3. 注解</p>
 <p>1) 概述<br>一种描述数据的数据，可以说注解就是源代码的元数据。它作用的对象是代码。它可以给特定的注解代码标注一些额外的信息。例如实现接口中的方法，都会在方法前面加上：@override<br>的注解，这样，此方法的特性就是一个重写的方法，必须满足一定的要求。具体如何处理注解的<br>含义，需要注解处理工具来执行，所以针对一些框架的注解，需要添加注解处理工具插件，例如<br>kotlin 中的 kapt（kotlin Annotation processing tool）。<br>注解以@字符作为名字的前缀，并放在要注解元素的前面。<br>元注解为注解的注解。元注解也是一个标签，但是它是一个特殊的标签，它的作用和目的就<br>是给其他普通的标签进行解释说明的。<br>Kotlin 元注解<br> @Target<br>目标注解，对应的注解类是 kotlin.annotation.Target，功能是指定一个注解的适用目标<br> @Retention<br>保留期注解 ，指定一个新注解的有效范围<br> @Repeatable<br>可重复注解，允许在单个元素上多次使用同一个注解<br> @MustBeDocumented<br>文档注解，该注解可以修饰代码元素（类，接口，函数，属性等）<br>2) 注解的应用<br>//注解声明：和类的声明很类似，只是在 class 前面加上了 annotation 修饰符<br>@Target(AnnotationTarget.FUNCTION)<br>@Retention(value = AnnotationRetention.RUNTIME)<br>annotation class TestAnnotation(val value: Int)<br>class Test {<br>//给 test 函数贴上 TestAnnotation 标签(添加 TestAnnotation 注解)<br>@TestAnnotation(value = 1000)<br>fun test() {<br>…<br>}<br>}<br>3) 在框架中使用注解<br>注解是给机器看的，注释是给程序员看的，这是两者的区别。现在各大框架都在使用注解，<br>程序员需要做的就是知道如何使用注解。<br>注解的使用大体分为三部分: 定义注解、使用注解、解析注解。在框架中定义与解析框架都已<br>经为我们做好了，所以开发的时候定义注解以及解析注解一般不用我们写，只需要学会使用框架<br>提供的注解即可。<br>解析注解需要注解处理工具处理，例如 Room 中自动生成代码等。此时需要添加注解处理工<br>具插件和添加依赖。2.4. 常量<br>声明常量的关键字：const<br>声明常量的方式：<br>const val 常量名 = 值<br>const 只能修饰 val，不能修饰 var<br>声明常量的三种正确方式<br> 在顶层声明<br> 在 object 修饰的类中声明，在 kotlin 中称为对象声明，它相当于 Java 中一种形式的单<br>例类<br> 在伴生对象中声明<br>例如：<br>// 1. 顶层声明<br>const val NUM_A : String = “顶层声明”<br>// 2. 在 object 修饰的类中<br>object TestConst{<br> const val NUM_B = “object 修饰的类中”<br>}<br>// 3. 伴生对象中<br>class TestClass{<br> companion object {<br> const val NUM_C = “伴生对象中声明”<br> }<br>}<br>fun main(args: Array<String>) {<br> println(“NUM_A： $NUM_A”)<br> println(“NUM_B： ${TestConst.NUM_B}”)<br> println(“NUM_C： ${TestClass.NUM_C}”)<br>}<br>2.5. 变量<br>kotlin 中，变量的声明必须使用 var 或 val 关键字。定义格式：<br>val/var 变量名:数据类型 = xxx<br>在定义时直接赋值，编译器可以推导其类型，所以可以省略类型，格式简化为：<br>val/var 变量名= xxx<br> val（value）用此关键字声明的变量表示不可变变量，即只读变量。相当于 Java 中的 final 变量。<br>注意：若 val 修饰的是一个对象，例如：val myUser = User()，那表示定义了一个 myUser<br>的引用，指向了一个 User 对象，且一旦定义后，此引用不能再指向别的对象。但是，User 对象<br>本身的值是可以改变的。<br> var（variable）<br>用此关键字声明的变量表示可变变量，即可读且可写。相当于 Java 中普通变量。<br>注意：kotlin 中不可以一次定义多个变量，例如：var a,b,c 这是错误的<br>例如：<br>//完整的定义格式<br>val a:Int=8<br>var var_a: Int = 10<br>//自动推断出 Int 类型<br>val b=2<br>var var_b = 5<br>//如果没有初始值，类型不能省略<br>val c:Int<br>c=3 //明确赋值，后面不能再次修改，例如： c += 1，这是错误的<br>var var_c: Float<br>var_c = 12.3f<br>var_c += 1 //可变变量，正确<br>注意：在不赋值的情况下，只声明变量，没有类型，程序会报错。因为不赋值就无法推导出<br>变量类型，此时就需要显示声明变量类型。例如：<br>var c //错误<br>var c:int //正确<br>val、var 如何选择呢？在程序设计中，优先选择 val，只有当 val 无法满足需求，再使用 var，<br>这样就能保证变量不会被胡乱修改，从而提高了程序的健壮性。</p>
 <h1 id="3-空值处理"><a href="#3-空值处理" class="headerlink" title="3. 空值处理"></a>3. 空值处理</h1><p>在程序开发过程中，经常会遇到空指针异常的问题，如果对这个问题处理不当，还可能引起<br>程序的崩溃（crash） ，因此在 Kotlin 中，为了避免出现空指针异常的问题，引入了 Null 机制。<br>3.1. 可空类型变量（？）<br>Kotlin 把变量分成两种类型，一种是可空类型的变量，一种是非空类型的变量。一般情况下，<br>一个变量默认是非空类型。当某个变量的值可以为空时，必须在声明处的数据类型后添加“?”来<br>标识该引用可为空。例如：<br>var name:String //声明非空变量<br>var age:Int? //声明可空变量注意：在使用可空变量时，若不赋初值，则必须要将其赋值为 null，否则会报 “variable ‘xxx’<br>must be initialized”异常。<br>例如：<br>package com.itheima.chapter02.variable<br>fun main(args: Array<String>) {<br>var name: String = “Tom” //非空变量<br>var telephone: String? = null //可空变量<br>if (telephone != null) {<br>print(telephone.length)<br>} else {<br>telephone = “18800008888”<br>print(“telephone =” + telephone)<br>}<br>}<br>上述代码中，在使用可空变量时，必须先对可空变量进行判断，如果 telephone 不为空则输<br>出电话号码的长度，否则赋值为 18800008888 并输出。若不判断，直接输出，会报异常。例如：<br>fun main() {<br> var name:String?=null<br> var result=name.length<br> println(result)<br>}<br>程序会抛出异常，表示只有非空变量或者采用安全调用符才可以调用可空变量。<br>3.2. 安全调用符（?.）<br>上一节中，可空变量在使用时需要通过 if…else 语句进行判断，然后再进行相应的操作。这<br>样的使用方式还是比较复杂，为此 Kotlin 提供了一个安全调用符“?.” ，专门用于调用可空类<br>型变量中的成员方法或属性，其语法格式为“变量?.成员” 。其作用是判断变量是否为 null，如<br>果不为 null 才调用变量的成员方法或者属性。<br>例：<br>fun main(args: Array<String>) {<br>var telephone: String? = null //可空变量<br>var result=telephont?.length //安全调用可空变量<br>println(result)<br>}<br>运行结果为 null，从运行结果可以看到，在使用“?.”调用可空变量的属性时，如果当前变量<br>为空，则程序编译也不会报错，而是返回一个 null 值。所以，非空变量调用是，最简单的方法就是采用安全调用符。<br>3.3. Elvis 操作符（?:）<br>在使用安全调用符调用可空变量中的成员方法或属性时，如果当前变量为空，则会返回一个<br>null 值，但有时即使当前变量为 null，也不想返回一个 null 值，而是指定一个默认值，通过 Elvis<br>操作符（?:）可以指定可空变量为 null 时， 调用该变量中的成员方法或属性的返回值， 其语法<br>格式为 ：<br>表达式?: 表达式<br>如果左侧表达式非空，则返回左侧表达式的值，否则返回右侧表达式的值。当且仅当左侧为<br>空时，才会对右侧表达式求值（短路现象）。<br>例如：<br>fun main(args: Array<String>) {<br>var telephone: String? = null //可空变量<br>var result=telephont?.length?:188000888 //telephone 为空时，使用?:操作符会返<br>回指定的默认值，而非 null。<br>println(result)<br>}<br>运行结果为：188000888<br>3.4. 非空断言（ !!. ）<br>除了通过使用安全调用符（?.）来使用可空类型的变量之外，还可以通过非空断言（!!.）来调<br>用可空类型变量的成员方法或属性。使用非空断言时，语法结构为:<br>变量!!.成员<br>非空断言（!!.）会将任何变量（可空类型变量或者非空类型变量）转换为非空类型的变量，<br>若该变量为空则抛出异常。例如：<br>fun main(args: Array<String>) {<br>var telephone: String? = null //可空变量<br>var result=telephont!!.length //使用非空断言<br>println(result)<br>}<br>运行结果：<br>Exception in thread “main” java.lang.NullPointerException<br>……<br>从运行结果可以看出，程序抛出了空指针异常，如果变量 telephone 赋值不为空，则程序可<br>正常运行。<br>安全调用符与非空断言运算符都可以调用可空变量的方法，但是在使用时有一定的差别，如<br>下表所示。3.5. 平台类型标记<br>Java 中任何引用都可能为 null，而 Kotlin 中只有可空和非空类型，所以 Java 在转换为 Kotlin<br>时，对于部分无法标注的类型，会转换为 Kotlin 中的平台类型。<br>平台类型：其实就是 Kotlin 不知道可空性信息的类型，既可以把它当作可空类型处理，也可<br>以当作非空类型处理，这意味着要像在 java 中对这个数据做 null 判断处理，否则数据为 null 将<br>会抛出空指针异常。<br>平台类型无法在程序中显示标记，所以语言中没有相关的语法。不过，编译器和 IDE 有时需<br>要显示这些类型（错误信息，参数信息等等），所以 Kotlin 提供了“!”助记符，例如：<br> T!表示 T 或 T?<br> Array&lt;(out) T&gt;!表示类型为 T 或 T 的子类的 Java 集合，可以为空或不为空</p>
@@ -1545,12 +547,17 @@
 <h1 id="18-内置拓展函数（let-with-run-apply-also）"><a href="#18-内置拓展函数（let-with-run-apply-also）" class="headerlink" title="18. 内置拓展函数（let, with, run, apply, also）"></a>18. 内置拓展函数（let, with, run, apply, also）</h1><p>和 Java 相比，Kotlin 中额外提供了不少高级语法特性，这些高级特性中，定义于 Kotlin 的<br>Standard.kt，提供了一些内置拓展函数以便写出更优雅的代码。<br>18.1. let<br>定义：fun &lt;T, R&gt; T.let( block: (T) -&gt; R ): R<br>功能：调用对象（T）的 let 函数，则该对象为函数的参数。在函数内可以通过 it 指代该对<br>象。返回值为函数的最后一行或指定 return 表达式。<br>any.let {<br> // 用 it 指代 any 对象<br> // todo() 是 any 对象的共有属性或方法<br> // it.todo() 的返回值作为 let 函数的返回值返回<br> it.todo()<br>}<br>let 在使用中可用于空安全验证，变量?.let{}<br>// 另一种用法any?.let {<br> it.todo() // any 不为 null 时才会调用 let 函数<br>}<br>18.2. with<br>和 let 类似，又和 let 不同，with 最后也包含一段函数块，也是将最后的计算的结果返回。<br>但是 with 不是以拓展的形式存在的。其将某个对象作为函数的参数，并且以 this 指代。<br>一般结构：<br>whith(any) {<br>// todo() 是 any 对象的共有属性或方法<br>// todo() 的返回值作为 with 函数的返回值返回<br>todo()<br>}<br>例如，用 with 设置 TextView，由于代码块中传入的是 TextView（this），而不是 it，那么就<br>可以直接写出函数名/属性来进行相应的设置：<br>if (textView == null) return //若 TextView 组件为 null 则进行如下设置<br>with(textView) {<br>text = “TextSetInTextView” //textView.text 属性<br>setTextColor(ContextCompat.getColor(this@TestActivity, R.color.colorAccent))<br>textSize = 18f<br>}<br>这段代码唯一的缺点就是要事先判空了，有没有既能像 let 那样能优雅的判空，又能写出<br>这样的便利的代码呢？那就是下面的 run<br>18.3. run<br>run 函数基本是 let 和 with 的结合体，对象调用 run 函数，接收一个 lambda 函数为参<br>数，传入 this 并以闭包形式返回，返回值是最后的计算结果。<br>一般结构：<br>any.run {<br>// todo() 是 any 对象的共有属性或方法<br>// todo() 的返回值作为 run 函数的返回值返回<br>todo()<br>}<br>TextView 设置各种属性的优化写法如下：<br>textView?.run {<br> text = “TextSetInTextView”<br> setTextColor(ContextCompat.getColor(this@TestActivity, R.color.colorAccent)) textSize = 18f<br>}<br>18.4. apply<br>apply 函数和 run 函数很像，但是 apply 最后返回的是调用对象自身。<br>一般结构：<br>val result = any.apply {<br>todo() // todo() 是 any 对象的共有属性或方法<br>3 * 4 // 最后返回的是 any 对象，而不是 12<br>}<br>println(result) // 打印的是 any 对象<br>18.5. also<br>also 和 let 函数类似，唯一的区别就是 also 函数的返回值是调用对象本身<br>val result = any.also {<br> // 用 it 指代 any 对象<br> // todo() 是 any 对象的共有属性或方法<br> it.todo()<br> 3 * 4 // 将返回 any 对象，而不是 12<br>}<br>具体的调用情况见下图：</p>
 <h1 id="19-关键字"><a href="#19-关键字" class="headerlink" title="19. 关键字"></a>19. 关键字</h1><p>19.1. ？的含义<br>在 kotlin 中单独使用？表示可为空；var result = str?.length<br>19.2. ?:的含义<br>表示三元操作符（即三目运算符）<br>var str : String? = null<br>var result = str?.length ?: -1<br>//等价于<br>var result : Int = if(str != null) str.length else -1<br>19.3. :（冒号）<br>类型和超类型之间的冒号前要有一个空格(&gt;:产生歧义)，而实例和类型之间的冒号前不要有空<br>格：<br>interface Foo<out T : Any> : Bar {<br> fun foo(a: Int): T<br>}<br>19.4. ::(双冒号)<br>表示把一个方法当做一个参数，传递到另一个方法中进行使用，就是引用一个方法。<br>19.5. ::class<br>反射中获得 class 的实例，val clazz = Hello::class.jav，Hello::class 获取的是 Kotlin 的<br>KClass<br>19.6. !!（双叹号）<br>非空断言，表示一定不能为空，<br>19.7. abstract :<br>抽象类 一个类或一些成员可能被声明成 abstract 。一个抽象方法在它的类中没有实现方法。<br>注意：抽象类或函数默认是 open 的，不用再添加。<br>19.8. any:<br>相当于 Java 中的 Object<br>19.9. by<br>类委托、属性委托19.10. companion object 伴生对象:<br>类内定义的伴生对象，相当于 java 中的 static 成员<br>companion object {<br>lateinit var instance: App<br>}<br>19.11. const:<br>编译期常量<br>19.12. constructor<br>用于标识构造函数<br>19.13. data class:<br>只包含数据字段的类，编译器自动成了如下方法：<br>equals()/hashCode()、toString()方法、componentN()方法、copy()方法<br>19.14. indices：<br>数组或 list 的索引属性：<br>val array=arrayOf(“a”,”b”,”c”)<br>for( i in array.indices ) println( i ) //分行输出 0,1,2<br>19.15. inline：<br>内联函数<br>19.16. inner:<br>内部类<br>19.17. internal:<br>internal 声明，在同一模块中的任何地方可见<br>19.18. is:<br>自动类型转换<br>19.19. lateinit var 延迟初始化属性：<br>lateinit 修饰的变量/属性不能是原始数据类型。<br>19.20. by lazy 懒属性(延迟加载)<br>val p: String by lazy {// 生成 string 的值<br>}<br>lateinit 只用于 var，lazy 只用于 val<br>lateinit var 只是让编译期忽略对属性未初始化的检查，后续在哪里以及何时初始化还需要开<br>发者自己决定。<br>by lazy 真正做到了声明的同时也指定了延迟初始化时的行为，在属性被第一次被使用的时候<br>能自动初始化。<br>19.21. object（用于创建单例模式）:<br>object Resource {<br>val name = “Name”<br>}<br>19.22. open 说明可以被继承 :<br>19.23. override<br>19.24. reified：<br>作为 Kotlin 的一个方法泛型关键字，代表可以在方法体内访问泛型指定的 JVM 类对象<br>19.25. sealed 密封类：<br>声明密封类需要在 class 前加一个 sealed 修饰符。<br>19.26. tailrec（尾递归）：<br>作用：修身尾递归函数。与普通递归相比，编译器会对尾递归进行修改，将其优化成一个快<br>速而高效的基于循环的版本，这样减少内存消耗。<br>19.27. Unit 类型：<br>如果函数返回 Unit 类型，该返回类型应该省略：<br>19.28. var 和 val：<br>定义可读写和只读变量<br>19.29. typealias：<br>定义类型别名<br>19.30. vararg ：<br>可变参数。一个函数最多只能有一个可变参数。19.31. when 用于判断 相当于 java 中的 switch()语句<br>19.32. 属性修饰符<br>annotation //注解类<br>abstract //抽象类<br>final //类不可继承，默认属性<br>enum //枚举类<br>open //类可继承，类默认是 final </p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-          
+
         
+
       
     </div>
 
       <!-- 相关文章推荐 -->
+     
+          
+
+
      
 
     
@@ -1559,14 +566,53 @@
 
     <div>
           
+            
+
+          
     </div>
 
     
 
     <div>
       
+        <div>
+    
+        <div class="read-over">-------------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读-------------------</div>
+    
+</div>
+
+      
     </div>
 
+    
+      <div>
+        <div class="share_reward">
+  <div>坚持原创技术分享，感谢您的支持和鼓励！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/keke_wechatpay.jpg" alt="YkekeY WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/keke_alipay.jpg" alt="YkekeY Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
     
 
     
@@ -1575,12 +621,28 @@
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/04/27/daily/" rel="next" title="Developer log 开发日志">
+                Developer log 开发日志 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -1590,10 +652,27 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+         <div
+  data-weibo-title="分享到微博"
+  data-qq-title="分享到QQ"
+  data-douban-title="分享到豆瓣"
+  class="social-share"
+  class="share-component"
+
+
+
+  data-disabled="qzone,google+,linkedin"
+  data-description="Share.js - 一键分享到微博，QQ空间，腾讯微博，人人，豆瓣...">
+   分享到：
+</div>
+
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -1601,6 +680,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
 
 
@@ -1664,8 +750,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -2069,6 +1164,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前言"><span class="nav-number">1.</span> <span class="nav-text">写在前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-kotlin-概述"><span class="nav-number">2.</span> <span class="nav-text">1. kotlin 概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-基本语法概述"><span class="nav-number">3.</span> <span class="nav-text">2. 基本语法概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-空值处理"><span class="nav-number">4.</span> <span class="nav-text">3. 空值处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-基本类型"><span class="nav-number">5.</span> <span class="nav-text">4. 基本类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-运算符"><span class="nav-number">6.</span> <span class="nav-text">5. 运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-控制流"><span class="nav-number">7.</span> <span class="nav-text">6. 控制流</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-函数"><span class="nav-number">8.</span> <span class="nav-text">7. 函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-可见性修饰符"><span class="nav-number">9.</span> <span class="nav-text">8. 可见性修饰符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#9-类"><span class="nav-number">10.</span> <span class="nav-text">9. 类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#10-反射"><span class="nav-number">11.</span> <span class="nav-text">10. 反射</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#11-委托对象-被委托对象"><span class="nav-number">12.</span> <span class="nav-text">11. 委托对象 被委托对象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#12-异常"><span class="nav-number">13.</span> <span class="nav-text">12. 异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#13-泛型"><span class="nav-number">14.</span> <span class="nav-text">13. 泛型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#14-集合"><span class="nav-number">15.</span> <span class="nav-text">14. 集合</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#15-IO"><span class="nav-number">16.</span> <span class="nav-text">15. IO</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#16-线程"><span class="nav-number">17.</span> <span class="nav-text">16. 线程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#17-协程（Coroutine）"><span class="nav-number">18.</span> <span class="nav-text">17. 协程（Coroutine）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#18-内置拓展函数（let-with-run-apply-also）"><span class="nav-number">19.</span> <span class="nav-text">18. 内置拓展函数（let, with, run, apply, also）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#19-关键字"><span class="nav-number">20.</span> <span class="nav-text">19. 关键字</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -2261,6 +1372,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
